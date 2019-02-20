@@ -1,0 +1,59 @@
+{{.Header}}
+
+{{/* .Navbar */}}
+
+	<div class="main-container" id="main-container">
+		<script type="text/javascript">
+			try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+		</script>
+
+		<!--左侧菜单-->
+		{{/* .Sidebar */}}
+		<!--/左侧菜单-->
+
+		<!--页面主体-->
+		<div class="main-content">
+		<div class="main-content-inner">
+		<div class="breadcrumbs" id="breadcrumbs">
+			<script type="text/javascript">
+				try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+			</script>
+
+			<ul class="breadcrumb">
+				<li class="active">
+					<i class="fa fa-home"></i>
+					<a href="/">首页</a>
+				</li>
+				<li>
+					<i class="fa fa-comment"></i>
+					<a href='{{urlfor "SmController.Index"}}'>短信查询</a>
+				</li>
+				<li>
+					<i class="fa fa-outdent"></i>
+					<a href='{{urlfor "CdrController.Index"}}'>话单详情</a>
+				</li>
+			</ul><!-- /.breadcrumb -->
+
+		</div>
+
+		<div class="content container-fluid">
+		<div class="row">
+		<div class="col-md-12">
+		
+		{{.LayoutContent}}
+		
+		</div>
+		</div>
+		
+		</div><!-- /.page-content -->
+		</div>
+		</div>
+		<!-- /.main-content -->
+		<!--/页面主体-->
+
+		<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+			<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+		</a>
+	</div><!-- /.main-container -->
+
+{{.Footer}}
